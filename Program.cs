@@ -11,13 +11,19 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Đăng ký Repository
 builder.Services.AddScoped<ITourRepository, TourRepository>();
+builder.Services.AddScoped<IProvinceRepository, ProvinceRepository>();
+
 
 // Đăng ký Service
 builder.Services.AddScoped<ITourService, TourService>();
+builder.Services.AddScoped<IProvinceService, ProvinceService>();
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors();
+
 
 var app = builder.Build();
 
@@ -29,6 +35,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors(policy =>
+    policy.AllowAnyOrigin()
+          .AllowAnyMethod()
+          .AllowAnyHeader());
+
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

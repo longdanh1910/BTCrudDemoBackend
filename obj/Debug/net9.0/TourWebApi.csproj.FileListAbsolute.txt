@@ -307,3 +307,4 @@ C:\practice c\TourWebApi\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawin
 C:\practice c\TourWebApi\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\practice c\TourWebApi\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\practice c\TourWebApi\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\practice c\TourWebApi\obj\Debug\net9.0\TourWebApi.sourcelink.json
